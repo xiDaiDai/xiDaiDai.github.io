@@ -228,15 +228,6 @@
 
     
     
-      
-      
-        
-        
-        
-      
-
-      
-    
 
     
       
@@ -306,6 +297,7 @@
           <span itemprop="articleBody">
             
               <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> count = <span class="number">0</span></span><br><span class="line"><span class="keyword">let</span> timer = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'循环调用开始'</span>)</span><br><span class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'start 请求'</span>)</span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="built_in">console</span>.log(<span class="string">'返回请求结果'</span>)&#125;,<span class="number">6000</span>)</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'end 请求'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'循环调用结束'</span>,count)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(count == <span class="number">4</span>)&#123;</span><br><span class="line">        clearInterval(timer)</span><br><span class="line">    &#125;</span><br><span class="line">    ++count</span><br><span class="line">&#125;,<span class="number">2000</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">循环调用开始</span><br><span class="line">循环调用结束 <span class="number">0</span></span><br><span class="line">start 请求</span><br><span class="line">end 请求 </span><br><span class="line">循环调用开始</span><br><span class="line">循环调用结束 <span class="number">1</span></span><br><span class="line">start 请求</span><br><span class="line">end 请求</span><br><span class="line">循环调用开始</span><br><span class="line">循环调用结束 <span class="number">2</span></span><br><span class="line">start 请求</span><br><span class="line">end 请求</span><br><span class="line">循环调用开始</span><br><span class="line">循环调用结束 <span class="number">3</span></span><br><span class="line">start 请求</span><br><span class="line">end 请求</span><br><span class="line">返回请求结果</span><br><span class="line">循环调用开始</span><br><span class="line">循环调用结束 <span class="number">4</span></span><br><span class="line">start 请求</span><br><span class="line">end 请求</span><br><span class="line">返回请求结果 </span><br><span class="line">返回请求结果 </span><br><span class="line">返回请求结果 </span><br><span class="line">返回请求结果</span><br></pre></td></tr></table></figure>
 <p><img src="http://xishiwei.github.io/images/interval.jpg" alt="Alt text"></p>
 
             
